@@ -13,3 +13,5 @@ Select the bell pattern you wish to move towards;
 Press a button to make one change at a time until the pattern is achieved;
 When the pattern is acheived, the unit displays the final order for 5 seconds;
 Then you can press the button and the changes will go back to rounds.
+You need both files (LCD_destination_sort_0.5.h and LCD_destination_sort_0.5.ino)
+Write both files to a folder named LCD_destination_sort_0.5 in your sketchbook.
