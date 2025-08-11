@@ -32,9 +32,9 @@
 //==========================================
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
+//LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
 // set the LCD address to 0x27 for a 16 chars and 2 line display
-//LiquidCrystal_I2C lcd(0x27,20,4);
+LiquidCrystal_I2C lcd(0x3F,20,4);
 #define button1 2 //push button 1 pin interrupt #0
 #define button2 3 //push button 2 pin interrupt #1
 unsigned long buttonTime = 0; //timing for  button debounce
@@ -46,7 +46,7 @@ uint8_t buttonState2 = 1;
 void isr1() //interrupt service routines for buttons
 {
   buttonTime = millis();
-  if(buttonTime - lastButtonTime > 150) //debounce delay
+  if(buttonTime - lastButtonTime > 250) //debounce delay
   {
   buttonState1 = 0;
   lastButtonTime = buttonTime;
@@ -56,7 +56,7 @@ void isr1() //interrupt service routines for buttons
 void isr2()
 {
   buttonTime = millis();
-  if(buttonTime - lastButtonTime > 150)
+  if(buttonTime - lastButtonTime > 250)
   {
   buttonState2 = 0;  
   lastButtonTime = buttonTime;
