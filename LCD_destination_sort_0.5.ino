@@ -2,14 +2,14 @@
 #include "LCD_destination_sort_final.h" //header file for the program
 
 void setup() 
-{  
+{
+ lcd.init();
+ lcd.backlight();
  //instructions to call button interrupt routines
  pinMode (button1, INPUT_PULLUP);
  attachInterrupt(digitalPinToInterrupt(button1), isr1, FALLING);
  pinMode (button2, INPUT_PULLUP);
  attachInterrupt(digitalPinToInterrupt(button2), isr2, FALLING);
- 
- lcd.begin(20,4); 
  delay(50);   
 }
 //==================================================================================
