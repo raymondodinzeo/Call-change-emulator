@@ -15,3 +15,8 @@ When the pattern is acheived, the unit displays the final order for 5 seconds;
 Then you can press the button and the changes will go back to rounds.
 You need both files (LCD_destination_sort_0.5.h and LCD_destination_sort_0.5.ino)
 Write both files to a folder named LCD_destination_sort_0.5 in your sketchbook.
+
+I have added destination sort 0.6 as an alternative that gives the option to 
+select a new pattern when the final order is reached rather 
+than always returning to rounds. Also number of ringers is now persistent 
+so once selected at switch-on, the selected number of ringers will remain the same.  
